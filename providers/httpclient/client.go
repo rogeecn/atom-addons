@@ -10,8 +10,8 @@ import (
 	"time"
 
 	"github.com/imroc/req/v3"
+	"github.com/rogeecn/atom-addons/providers/httpclient/cookiejar"
 	"github.com/rogeecn/atom/container"
-	"github.com/rogeecn/atom/providers/httpclient/cookiejar"
 	"github.com/rogeecn/atom/utils/opt"
 )
 

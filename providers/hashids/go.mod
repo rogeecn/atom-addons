@@ -4,6 +4,7 @@ go 1.20
 
 require (
 	github.com/rogeecn/atom v0.0.0-20230609065829-aee21ec77209
+	github.com/rogeecn/atom-addons/providers/http v0.0.0-20230612015354-c4986241695f
 	github.com/speps/go-hashids/v2 v2.0.1
 )
 

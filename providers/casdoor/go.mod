@@ -5,6 +5,7 @@ go 1.20
 require (
 	github.com/casdoor/casdoor-go-sdk v0.21.0
 	github.com/rogeecn/atom v0.0.0-20230609065829-aee21ec77209
+	github.com/rogeecn/atom-addons/providers/cert v0.0.0-20230612020047-8865857d6e6e
 )
 
 require (

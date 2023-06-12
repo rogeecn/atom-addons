@@ -5,6 +5,7 @@ go 1.20
 require (
 	github.com/gin-gonic/gin v1.9.1
 	github.com/rogeecn/atom v0.0.0-20230609065829-aee21ec77209
+	github.com/rogeecn/atom-addons/providers/http v0.0.0-20230612015354-c4986241695f
 	github.com/swaggo/files v1.0.1
 	github.com/swaggo/gin-swagger v1.6.0
 	github.com/swaggo/swag v1.16.1

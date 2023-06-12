@@ -1,9 +1,9 @@
 package gomicro
 
 import (
+	"github.com/rogeecn/atom-addons/providers/http"
+	"github.com/rogeecn/atom-addons/providers/micro_service"
 	"github.com/rogeecn/atom/container"
-	"github.com/rogeecn/atom/providers/http"
-	"github.com/rogeecn/atom/providers/micro_service"
 	"github.com/rogeecn/atom/utils/opt"
 	"go-micro.dev/v4"
 	goMicro "go-micro.dev/v4"

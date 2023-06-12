@@ -4,6 +4,8 @@ go 1.20
 
 require (
 	github.com/rogeecn/atom v0.0.0-20230609065829-aee21ec77209
+	github.com/rogeecn/atom-addons/providers/http v0.0.0-20230612015354-c4986241695f
+	github.com/rogeecn/atom-addons/providers/log v0.0.0-20230612020047-8865857d6e6e
 	go.uber.org/dig v1.17.0
 )
 
@@ -41,7 +43,7 @@ require (
 	github.com/ugorji/go/codec v1.2.11 // indirect
 	go.uber.org/atomic v1.9.0 // indirect
 	go.uber.org/multierr v1.8.0 // indirect
-	go.uber.org/zap v1.21.0 // indirect
+	go.uber.org/zap v1.24.0 // indirect
 	golang.org/x/arch v0.3.0 // indirect
 	golang.org/x/crypto v0.9.0 // indirect
 	golang.org/x/net v0.10.0 // indirect

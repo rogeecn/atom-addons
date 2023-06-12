@@ -4,8 +4,8 @@ import (
 	"net"
 
 	"github.com/pkg/errors"
+	"github.com/rogeecn/atom-addons/providers/log"
 	"github.com/rogeecn/atom/container"
-	"github.com/rogeecn/atom/providers/log"
 	"github.com/rogeecn/atom/utils/opt"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"

@@ -5,8 +5,8 @@ import (
 	"path/filepath"
 
 	"github.com/pkg/errors"
+	"github.com/rogeecn/atom-addons/providers/log"
 	"github.com/rogeecn/atom/container"
-	"github.com/rogeecn/atom/providers/log"
 	"github.com/rogeecn/atom/utils/opt"
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/client-go/tools/clientcmd"

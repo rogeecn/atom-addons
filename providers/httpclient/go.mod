@@ -7,6 +7,7 @@ require (
 	github.com/juju/go4 v0.0.0-20160222163258-40d72ab9641a
 	github.com/pkg/errors v0.9.1
 	github.com/rogeecn/atom v0.0.0-20230609065829-aee21ec77209
+	github.com/rogeecn/atom-addons/providers/http v0.0.0-20230612015354-c4986241695f
 	golang.org/x/net v0.10.0
 	gopkg.in/retry.v1 v1.0.3
 )

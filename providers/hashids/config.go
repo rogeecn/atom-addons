@@ -1,8 +1,8 @@
 package hashids
 
 import (
+	"github.com/rogeecn/atom-addons/providers/http"
 	"github.com/rogeecn/atom/container"
-	"github.com/rogeecn/atom/providers/http"
 	"github.com/rogeecn/atom/utils/opt"
 )
 

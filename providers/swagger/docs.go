@@ -4,9 +4,9 @@ import (
 	"fmt"
 
 	"github.com/gin-gonic/gin"
+	"github.com/rogeecn/atom-addons/providers/http"
 	"github.com/rogeecn/atom/container"
 	"github.com/rogeecn/atom/contracts"
-	"github.com/rogeecn/atom/providers/http"
 	"github.com/rogeecn/atom/utils/opt"
 	swaggerFiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
