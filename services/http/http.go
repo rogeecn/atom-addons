@@ -15,7 +15,7 @@ type Http struct {
 	Routes   []http.Route        `group:"routes"`
 }
 
-func ServeHttp() error {
+func Serve() error {
 	defer container.Close()
 
 	return container.Container.Invoke(func(http Http) error {

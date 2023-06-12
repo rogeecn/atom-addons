@@ -13,7 +13,7 @@ type GrpcService struct {
 	Services []grpcs.ServerService `group:"grpc_server_services"`
 }
 
-func ServeGrpc() error {
+func Serve() error {
 	defer container.Close()
 
 	return container.Container.Invoke(func(grpc GrpcService) error {
