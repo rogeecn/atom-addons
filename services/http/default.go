@@ -6,7 +6,7 @@ import (
 	"github.com/rogeecn/atom/container"
 )
 
-func DefaultHTTP(providers ...container.ProviderContainer) container.Providers {
+func Default(providers ...container.ProviderContainer) container.Providers {
 	return append(container.Providers{
 		log.DefaultProvider(),
 		gin.DefaultProvider(),
