@@ -1,8 +1,8 @@
 package grpc
 
 import (
+	"github.com/rogeecn/atom-addons/providers/grpcs"
 	"github.com/rogeecn/atom/container"
-	"github.com/rogeecn/atom/providers/grpcs"
 	"go.uber.org/dig"
 )
 
