@@ -2,7 +2,9 @@ package swagger
 
 import (
 	"fmt"
+	"strings"
 
+	jsonpatch "github.com/evanphx/json-patch"
 	"github.com/gin-gonic/gin"
 	"github.com/rogeecn/atom-addons/providers/http"
 	"github.com/rogeecn/atom/container"
@@ -17,7 +19,32 @@ type Swagger struct {
 	http   http.Service
 }
 
-func (swagger *Swagger) Load(spec string) {
+const infoTpl = `{"schemes": "__ marshal .Schemes __",
+"swagger": "2.0",
+"info": {
+	"description": "{{escape .Description}}",
+	"title": "{{.Title}}",
+	"contact": {},
+	"version": "{{.Version}}"
+},
+"host": "{{.Host}}",
+"basePath": "{{.BasePath}}"}`
+
+func (swagger *Swagger) Load(spec string) error {
+	original := []byte(spec)
+	target := []byte(infoTpl)
+	patch, err := jsonpatch.MergeMergePatches(original, target)
+	if err != nil {
+		return err
+	}
+
+	merged, err := jsonpatch.MergePatch(original, patch)
+	if err != nil {
+		return err
+	}
+
+	spec = strings.NewReplacer(`"__`, "{{", `__"`, "}}").Replace(string(merged))
+
 	swaggerInfo := &swag.Spec{
 		Version:          swagger.config.Version,
 		Host:             swagger.config.Host,
@@ -40,6 +67,7 @@ func (swagger *Swagger) Load(spec string) {
 		handler = ginSwagger.WrapHandler(swaggerFiles.Handler)
 	}
 	engine.GET(fmt.Sprintf("/%s/*any", swagger.config.BaseRoute), handler)
+	return nil
 }
 
 func Provide(opts ...opt.Option) error {
