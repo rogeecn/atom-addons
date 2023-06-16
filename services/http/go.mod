@@ -3,14 +3,14 @@ module github.com/rogeecn/atom-addons/services/http
 go 1.20
 
 require (
-	github.com/rogeecn/atom v0.0.0-20230609065829-aee21ec77209
-	github.com/rogeecn/atom-addons/providers/http v0.0.0-20230612015354-c4986241695f
-	github.com/rogeecn/atom-addons/providers/log v0.0.0-20230612020047-8865857d6e6e
+	github.com/rogeecn/atom v1.0.0
+	github.com/rogeecn/atom-addons/providers/http v0.0.0-20230613110641-0eab1ddb300c
+	github.com/rogeecn/atom-addons/providers/log v0.0.0-20230613110641-0eab1ddb300c
 	go.uber.org/dig v1.17.0
 )
 
 require (
-	github.com/brianvoe/gofakeit/v6 v6.20.1 // indirect
+	github.com/brianvoe/gofakeit/v6 v6.22.0 // indirect
 	github.com/bytedance/sonic v1.9.1 // indirect
 	github.com/chenzhuoyu/base64x v0.0.0-20221115062448-fe3a3abad311 // indirect
 	github.com/fsnotify/fsnotify v1.6.0 // indirect
@@ -42,14 +42,14 @@ require (
 	github.com/subosito/gotenv v1.4.2 // indirect
 	github.com/twitchyliquid64/golang-asm v0.15.1 // indirect
 	github.com/ugorji/go/codec v1.2.11 // indirect
-	go.uber.org/atomic v1.9.0 // indirect
-	go.uber.org/multierr v1.8.0 // indirect
+	go.uber.org/atomic v1.11.0 // indirect
+	go.uber.org/multierr v1.11.0 // indirect
 	go.uber.org/zap v1.24.0 // indirect
 	golang.org/x/arch v0.3.0 // indirect
-	golang.org/x/crypto v0.9.0 // indirect
-	golang.org/x/net v0.10.0 // indirect
-	golang.org/x/sys v0.8.0 // indirect
-	golang.org/x/text v0.9.0 // indirect
+	golang.org/x/crypto v0.10.0 // indirect
+	golang.org/x/net v0.11.0 // indirect
+	golang.org/x/sys v0.9.0 // indirect
+	golang.org/x/text v0.10.0 // indirect
 	google.golang.org/protobuf v1.30.0 // indirect
 	gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c // indirect
 	gopkg.in/ini.v1 v1.67.0 // indirect

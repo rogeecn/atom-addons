@@ -3,7 +3,7 @@ module github.com/rogeecn/atom-addons/providers/micro_service/gomicro
 go 1.20
 
 require (
-	github.com/rogeecn/atom v0.0.0-20230609065829-aee21ec77209
+	github.com/rogeecn/atom v1.0.0
 	go-micro.dev/v4 v4.10.2
 )
 
