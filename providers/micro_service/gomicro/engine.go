@@ -5,7 +5,6 @@ import (
 	"github.com/rogeecn/atom/container"
 	"github.com/rogeecn/atom/utils/opt"
 	"go-micro.dev/v4"
-	goMicro "go-micro.dev/v4"
 )
 
 func DefaultProvider() container.ProviderContainer {
@@ -27,7 +26,7 @@ func Provide(opts ...opt.Option) error {
 	return container.Container.Provide(func() (micro_service.Service, error) {
 		service := &Service{
 			conf:   &config,
-			Engine: goMicro.NewService(),
+			Engine: micro.NewService(),
 		}
 		return service, nil
 	}, o.DiOptions()...)
@@ -35,7 +34,7 @@ func Provide(opts ...opt.Option) error {
 
 type Service struct {
 	conf   *micro_service.Config
-	Engine goMicro.Service
+	Engine micro.Service
 }
 
 func (s *Service) Serve() error {
