@@ -33,13 +33,28 @@ type Config struct {
 }
 
 func (m *Config) EmptyDsn() string {
-	dsnTpl := "host=%s user=%s password=%s port=%d dbname=postgres sslmode=disable TimeZone=Asia/Shanghai"
+	dsnTpl := "host=%s user=%s password=%s port=%d dbname=%s sslmode=%s TimeZone=%s"
+	if m.SslMode == "" {
+		m.SslMode = "disable"
+	}
 
-	return fmt.Sprintf(dsnTpl, m.Host, m.Username, m.Password, m.Port)
+	if m.TimeZone == "" {
+		m.TimeZone = "Asia/Shanghai"
+	}
+
+	return fmt.Sprintf(dsnTpl, m.Host, m.Username, m.Password, m.Port, m.Database, m.SslMode, m.TimeZone)
 }
 
 // DSN connection dsn
 func (m *Config) DSN() string {
 	dsnTpl := "host=%s user=%s password=%s dbname=%s port=%d sslmode=%s TimeZone=%s"
+
+	if m.SslMode == "" {
+		m.SslMode = "disable"
+	}
+
+	if m.TimeZone == "" {
+		m.TimeZone = "Asia/Shanghai"
+	}
 	return fmt.Sprintf(dsnTpl, m.Host, m.Username, m.Password, m.Database, m.Port, m.SslMode, m.TimeZone)
 }
