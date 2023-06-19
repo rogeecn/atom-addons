@@ -9,5 +9,5 @@ func newZapLogger(conf *Config) (*Logger, error) {
 	if err != nil {
 		return nil, err
 	}
-	return &Logger{logger: logger.Sugar()}, nil
+	return &Logger{Logger: logger.Sugar()}, nil
 }

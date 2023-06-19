@@ -2,6 +2,7 @@ package queue
 
 import (
 	"context"
+	"encoding/json"
 
 	"github.com/hibiken/asynq"
 	"github.com/rogeecn/atom-addons/providers/database/redis"
@@ -41,8 +42,10 @@ func Provide(opts ...opt.Option) error {
 }
 
 type QueueHandler interface {
+	Type() string
+	Options() []asynq.Option
+	EnqueueContext(ctx context.Context, payload interface{}) (*asynq.TaskInfo, error)
 	ProcessTask(context.Context, *asynq.Task) error
-	GetType() string
 }
 
 type Queue struct {
@@ -57,14 +60,19 @@ func (q *Queue) Serve() error {
 
 func (q *Queue) Handle(handlers ...QueueHandler) {
 	for _, hdl := range handlers {
-		q.Mux.Handle(hdl.GetType(), hdl)
+		q.Mux.Handle(hdl.Type(), hdl)
 	}
 }
 
-func (q *Queue) Enqueue(task *asynq.Task, opts ...asynq.Option) (*asynq.TaskInfo, error) {
-	return q.Client.Enqueue(task, opts...)
+func (q *Queue) Enqueue(hdl QueueHandler, payload interface{}) (*asynq.TaskInfo, error) {
+	return q.EnqueueContext(context.Background(), hdl, payload)
 }
 
-func (q *Queue) EnqueueContext(ctx context.Context, task *asynq.Task, opts ...asynq.Option) (*asynq.TaskInfo, error) {
-	return q.Client.EnqueueContext(ctx, task, opts...)
+func (q *Queue) EnqueueContext(ctx context.Context, hdl QueueHandler, payload interface{}) (*asynq.TaskInfo, error) {
+	d, err := json.Marshal(payload)
+	if err != nil {
+		return nil, err
+	}
+	t := asynq.NewTask(hdl.Type(), d)
+	return q.Client.EnqueueContext(ctx, t, hdl.Options()...)
 }

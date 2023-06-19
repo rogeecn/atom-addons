@@ -169,6 +169,7 @@ github.com/robfig/cron/v3 v3.0.1 h1:WdRxkvbJztn8LMz/QEvLN5sBU+xKpSqwwUO1Pjr4qDs=
 github.com/robfig/cron/v3 v3.0.1/go.mod h1:eQICP3HwyT7UooqI/z+Ov+PtYAWygg1TEWWzGIFLtro=
 github.com/rogeecn/atom v1.0.0 h1:+Cp+c5KEqTuzrlL9Mq0HUYCQSO2JQSEGWjaHo9aQLlY=
 github.com/rogeecn/atom v1.0.0/go.mod h1:XZjNCEMIl2TcuVdYmke5UeykrPRaDuTJaWD+clmEsms=
+github.com/rogeecn/atom-addons/providers/database/redis v0.0.0-20230619031713-8c5d4f1db1e5 h1:4a3+K4kbltpGJOSSrJ55aCU5yDZoKCwdCyRk5UrPq7A=
 github.com/rogeecn/atom-addons/providers/log v0.0.0-20230619023804-f8cc94d94f79 h1:gN9/uYIAe8SRDS4DU1x2q9YVGXOMKriAFXSMMBFpo7w=
 github.com/rogeecn/atom-addons/providers/log v0.0.0-20230619023804-f8cc94d94f79/go.mod h1:9qowXGVIko8SwIyrIHUpDPzdsQsXcr/0L+uMdriUjdw=
 github.com/rogpeppe/go-internal v1.3.0/go.mod h1:M8bDsm7K2OlrFYOpmOWEs/qY81heoFRclV5y23lUDJ4=
@@ -195,7 +196,6 @@ github.com/stretchr/testify v1.7.1/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/
 github.com/stretchr/testify v1.8.0/go.mod h1:yNjHg4UonilssWZ8iaSj1OCr/vHnekPRkoO+kdMU+MU=
 github.com/stretchr/testify v1.8.3/go.mod h1:sz/lmYIOXD/1dqDmKjjqLyZ2RngseejIcXlSw2iwfAo=
 github.com/stretchr/testify v1.8.4 h1:CcVxjf3Q8PM0mHUKJCdn+eZZtm5yQwehR5yeSVQQcUk=
-github.com/stretchr/testify v1.8.4/go.mod h1:sz/lmYIOXD/1dqDmKjjqLyZ2RngseejIcXlSw2iwfAo=
 github.com/subosito/gotenv v1.4.2 h1:X1TuBLAMDFbaTAChgCBLu3DU3UPyELpnF2jjJ2cz/S8=
 github.com/subosito/gotenv v1.4.2/go.mod h1:ayKnFf/c6rvx/2iiLrJUk1e6plDbT3edrFNGqEflhK0=
 github.com/yuin/goldmark v1.1.25/go.mod h1:3hX8gzYuyVAZsxl0MRgGTJEmQBFcNTphYh9decYSb74=

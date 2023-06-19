@@ -5,6 +5,7 @@ go 1.18
 require (
 	github.com/hibiken/asynq v0.24.1
 	github.com/rogeecn/atom v1.0.0
+	github.com/rogeecn/atom-addons/providers/database/redis v0.0.0-20230619031713-8c5d4f1db1e5
 	github.com/rogeecn/atom-addons/providers/log v0.0.0-20230619023804-f8cc94d94f79
 )
 
@@ -18,6 +19,7 @@ require (
 	github.com/magiconair/properties v1.8.7 // indirect
 	github.com/mitchellh/mapstructure v1.5.0 // indirect
 	github.com/pelletier/go-toml/v2 v2.0.8 // indirect
+	github.com/pkg/errors v0.9.1 // indirect
 	github.com/redis/go-redis/v9 v9.0.5 // indirect
 	github.com/robfig/cron/v3 v3.0.1 // indirect
 	github.com/spf13/afero v1.9.5 // indirect
@@ -25,7 +27,6 @@ require (
 	github.com/spf13/jwalterweatherman v1.1.0 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
 	github.com/spf13/viper v1.16.0 // indirect
-	github.com/stretchr/testify v1.8.4 // indirect
 	github.com/subosito/gotenv v1.4.2 // indirect
 	go.uber.org/atomic v1.11.0 // indirect
 	go.uber.org/dig v1.17.0 // indirect
