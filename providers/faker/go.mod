@@ -1,6 +1,6 @@
 module github.com/rogeecn/atom-addons/providers/faker
 
-go 1.20
+go 1.18
 
 require (
 	github.com/brianvoe/gofakeit/v6 v6.22.0

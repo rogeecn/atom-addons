@@ -1,6 +1,6 @@
 module github.com/rogeecn/atom-addons/providers/captcha
 
-go 1.20
+go 1.18
 
 require (
 	github.com/mojocn/base64Captcha v1.3.5

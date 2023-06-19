@@ -1,6 +1,6 @@
 module github.com/rogeecn/atom-addons/providers/single_flight
 
-go 1.20
+go 1.18
 
 require (
 	github.com/rogeecn/atom v1.0.0

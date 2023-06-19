@@ -1,6 +1,6 @@
 module github.com/rogeecn/atom-addons/providers/httpclient
 
-go 1.20
+go 1.18
 
 require (
 	github.com/imroc/req/v3 v3.36.1

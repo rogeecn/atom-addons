@@ -1,6 +1,6 @@
 module github.com/rogeecn/atom-addons/providers/casdoor
 
-go 1.20
+go 1.18
 
 require (
 	github.com/casdoor/casdoor-go-sdk v0.21.0

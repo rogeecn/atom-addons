@@ -1,6 +1,6 @@
 module github.com/rogeecn/atom-addons/providers/uuid
 
-go 1.20
+go 1.18
 
 require (
 	github.com/gofrs/uuid v4.4.0+incompatible

@@ -1,6 +1,6 @@
 module github.com/rogeecn/atom-addons/providers/queue
 
-go 1.20
+go 1.18
 
 require (
 	github.com/hibiken/asynq v0.24.1

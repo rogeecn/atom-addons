@@ -1,6 +1,6 @@
 module github.com/rogeecn/atom-addons/providers/http
 
-go 1.20
+go 1.18
 
 require (
 	github.com/gin-gonic/gin v1.9.1

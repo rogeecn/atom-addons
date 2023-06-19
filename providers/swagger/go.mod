@@ -1,6 +1,6 @@
 module github.com/rogeecn/atom-addons/providers/swagger
 
-go 1.20
+go 1.18
 
 require (
 	github.com/evanphx/json-patch v0.5.2
