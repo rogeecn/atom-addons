@@ -17,4 +17,5 @@ func DefaultProvider() container.ProviderContainer {
 }
 
 type Config struct {
+	Concurrency int
 }
