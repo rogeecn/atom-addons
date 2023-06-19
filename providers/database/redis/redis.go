@@ -16,17 +16,33 @@ func Provide(opts ...opt.Option) error {
 		return err
 	}
 
-	return container.Container.Provide(func() (*redis.Client, error) {
+	return container.Container.Provide(func() (*RedisClientWrapper, *redis.Client, error) {
 		client := redis.NewClient(conf.ToRedisOptions())
 
 		_, err := client.Ping(context.Background()).Result()
 		if err != nil {
-			return nil, errors.Wrap(err, "failed to ping")
+			return nil, nil, errors.Wrap(err, "failed to ping")
 		}
 
+		redis := &RedisClientWrapper{Client: client}
 		container.AddCloseAble(func() {
-			client.Close()
+			redis.Close()
 		})
-		return client, nil
+		return redis, redis.Client, nil
 	}, o.DiOptions()...)
+}
+
+type RedisClientWrapper struct {
+	Client *redis.Client
+}
+
+func (r *RedisClientWrapper) Close() error {
+	if r.Client == nil {
+		return nil
+	}
+	return r.Client.Close()
+}
+
+func (r *RedisClientWrapper) MakeRedisClient() interface{} {
+	return r.Client
 }

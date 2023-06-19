@@ -4,6 +4,7 @@ import (
 	"context"
 
 	"github.com/hibiken/asynq"
+	"github.com/rogeecn/atom-addons/providers/database/redis"
 	"github.com/rogeecn/atom-addons/providers/log"
 	"github.com/rogeecn/atom/container"
 	"github.com/rogeecn/atom/utils/opt"
@@ -15,11 +16,10 @@ func Provide(opts ...opt.Option) error {
 	if err := o.UnmarshalConfig(&config); err != nil {
 		return err
 	}
-	return container.Container.Provide(func(logger *log.Logger) (*Queue, error) {
-		redisClientOptions := asynq.RedisClientOpt{}
+	return container.Container.Provide(func(logger *log.Logger, redis *redis.RedisClientWrapper) (*Queue, error) {
 		return &Queue{
 			Server: asynq.NewServer(
-				redisClientOptions,
+				redis,
 				asynq.Config{
 					// Specify how many concurrent workers to use
 					Concurrency: config.Concurrency,
@@ -35,7 +35,7 @@ func Provide(opts ...opt.Option) error {
 				},
 			),
 			Mux:    asynq.NewServeMux(),
-			Client: asynq.NewClient(redisClientOptions),
+			Client: asynq.NewClient(redis),
 		}, nil
 	}, o.DiOptions()...)
 }
