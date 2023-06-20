@@ -50,7 +50,10 @@ func Provide(opts ...opt.Option) error {
 	}
 
 	return container.Container.Provide(func(l *log.Logger) (http.Service, error) {
-		engine := fiber.New()
+		engine := fiber.New(fiber.Config{
+			EnablePrintRoutes: true,
+			StrictRouting:     true,
+		})
 		engine.Use(recover.New())
 
 		if config.StaticRoute != nil && config.StaticPath != nil {

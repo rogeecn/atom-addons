@@ -5,12 +5,12 @@ import (
 	"strings"
 
 	jsonpatch "github.com/evanphx/json-patch"
-	"github.com/gin-gonic/gin"
+	"github.com/gofiber/fiber/v2"
 	"github.com/rogeecn/atom-addons/providers/http"
 	"github.com/rogeecn/atom/container"
 	"github.com/rogeecn/atom/utils/opt"
+	fiberSwagger "github.com/swaggo/fiber-swagger"
 	swaggerFiles "github.com/swaggo/files"
-	ginSwagger "github.com/swaggo/gin-swagger"
 	"github.com/swaggo/swag"
 )
 
@@ -58,15 +58,15 @@ func (swagger *Swagger) Load(spec string) error {
 		RightDelim:       "}}",
 	}
 	swag.Register(swaggerInfo.InstanceName(), swaggerInfo)
-	engine := swagger.http.GetEngine().(*gin.Engine)
+	engine := swagger.http.GetEngine().(*fiber.App)
 
-	var handler gin.HandlerFunc
+	var handler fiber.Handler
 	if swagger.config.HandlerConfig != nil {
-		handler = ginSwagger.CustomWrapHandler(swagger.config.HandlerConfig, swaggerFiles.Handler)
+		handler = fiberSwagger.CustomWrapHandler(swagger.config.HandlerConfig, swaggerFiles.Handler)
 	} else {
-		handler = ginSwagger.WrapHandler(swaggerFiles.Handler)
+		handler = fiberSwagger.WrapHandler(swaggerFiles.Handler)
 	}
-	engine.GET(fmt.Sprintf("/%s/*any", swagger.config.BaseRoute), handler)
+	engine.Get(fmt.Sprintf("/%s/*any", swagger.config.BaseRoute), handler)
 	return nil
 }
 
