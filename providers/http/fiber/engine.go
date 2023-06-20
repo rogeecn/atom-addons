@@ -61,7 +61,7 @@ func Provide(opts ...opt.Option) error {
 		}
 
 		engine.Use(logger.New(logger.Config{
-			Format:     "[${ip}:${port}] - [${time}] - ${method} - ${status} - ${path} ${latency} ${ua} \n",
+			Format:     `[${ip}:${port}] - [${time}] - ${method} - ${status} - ${path} ${latency} "${ua}"` + "\n",
 			TimeFormat: time.RFC1123,
 			TimeZone:   "Asia/Shanghai",
 		}))

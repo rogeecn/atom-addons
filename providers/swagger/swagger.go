@@ -10,7 +10,6 @@ import (
 	"github.com/rogeecn/atom/container"
 	"github.com/rogeecn/atom/utils/opt"
 	fiberSwagger "github.com/swaggo/fiber-swagger"
-	swaggerFiles "github.com/swaggo/files"
 	"github.com/swaggo/swag"
 )
 
@@ -60,13 +59,7 @@ func (swagger *Swagger) Load(spec string) error {
 	swag.Register(swaggerInfo.InstanceName(), swaggerInfo)
 	engine := swagger.http.GetEngine().(*fiber.App)
 
-	var handler fiber.Handler
-	if swagger.config.HandlerConfig != nil {
-		handler = fiberSwagger.CustomWrapHandler(swagger.config.HandlerConfig, swaggerFiles.Handler)
-	} else {
-		handler = fiberSwagger.WrapHandler(swaggerFiles.Handler)
-	}
-	engine.Get(fmt.Sprintf("/%s/*any", swagger.config.BaseRoute), handler)
+	engine.Get(fmt.Sprintf("/%s/*", swagger.config.BaseRoute), fiberSwagger.WrapHandler)
 	return nil
 }
 
