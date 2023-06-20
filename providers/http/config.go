@@ -7,11 +7,12 @@ import (
 const DefaultPrefix = "Http"
 
 type Config struct {
-	Static *string
-	Host   *string
-	Port   uint
-	Tls    *Tls
-	Cors   *Cors
+	StaticPath  *string
+	StaticRoute *string
+	Host        *string
+	Port        uint
+	Tls         *Tls
+	Cors        *Cors
 }
 
 type Tls struct {
