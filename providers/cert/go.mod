@@ -2,7 +2,7 @@ module github.com/rogeecn/atom-addons/providers/cert
 
 go 1.18
 
-require github.com/rogeecn/atom v1.0.0
+require github.com/rogeecn/atom v1.0.1
 
 require (
 	github.com/fsnotify/fsnotify v1.6.0 // indirect

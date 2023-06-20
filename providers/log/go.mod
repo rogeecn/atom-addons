@@ -3,7 +3,7 @@ module github.com/rogeecn/atom-addons/providers/log
 go 1.18
 
 require (
-	github.com/rogeecn/atom v1.0.0
+	github.com/rogeecn/atom v1.0.1
 	go.uber.org/zap v1.24.0
 )
 

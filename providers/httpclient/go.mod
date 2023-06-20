@@ -3,11 +3,11 @@ module github.com/rogeecn/atom-addons/providers/httpclient
 go 1.18
 
 require (
-	github.com/imroc/req/v3 v3.36.1
+	github.com/imroc/req/v3 v3.37.0
 	github.com/juju/go4 v0.0.0-20160222163258-40d72ab9641a
 	github.com/pkg/errors v0.9.1
-	github.com/rogeecn/atom v1.0.0
-	github.com/rogeecn/atom-addons/providers/http v0.0.0-20230613110641-0eab1ddb300c
+	github.com/rogeecn/atom v1.0.1
+	github.com/rogeecn/atom-addons/providers/http v0.0.0-20230619103917-2f2bd26c1555
 	golang.org/x/net v0.11.0
 	gopkg.in/retry.v1 v1.0.3
 )
@@ -25,7 +25,7 @@ require (
 	github.com/klauspost/compress v1.16.6 // indirect
 	github.com/magiconair/properties v1.8.7 // indirect
 	github.com/mitchellh/mapstructure v1.5.0 // indirect
-	github.com/onsi/ginkgo/v2 v2.10.0 // indirect
+	github.com/onsi/ginkgo/v2 v2.11.0 // indirect
 	github.com/pelletier/go-toml/v2 v2.0.8 // indirect
 	github.com/quic-go/qpack v0.4.0 // indirect
 	github.com/quic-go/qtls-go1-19 v0.3.2 // indirect

@@ -3,8 +3,8 @@ module github.com/rogeecn/atom-addons/providers/hashids
 go 1.18
 
 require (
-	github.com/rogeecn/atom v1.0.0
-	github.com/rogeecn/atom-addons/providers/http v0.0.0-20230613110641-0eab1ddb300c
+	github.com/rogeecn/atom v1.0.1
+	github.com/rogeecn/atom-addons/providers/http v0.0.0-20230619103917-2f2bd26c1555
 	github.com/speps/go-hashids/v2 v2.0.1
 )
 

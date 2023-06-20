@@ -162,6 +162,8 @@ github.com/remyoudompheng/bigfft v0.0.0-20230129092748-24d4a6f8daec h1:W09IVJc94
 github.com/remyoudompheng/bigfft v0.0.0-20230129092748-24d4a6f8daec/go.mod h1:qqbHyh8v60DhA7CoWK5oRCqLrMHRGoxYCSS9EjAz6Eo=
 github.com/rogeecn/atom v1.0.0 h1:+Cp+c5KEqTuzrlL9Mq0HUYCQSO2JQSEGWjaHo9aQLlY=
 github.com/rogeecn/atom v1.0.0/go.mod h1:XZjNCEMIl2TcuVdYmke5UeykrPRaDuTJaWD+clmEsms=
+github.com/rogeecn/atom v1.0.1 h1:PDMKHA3WlbOZIxbkN4V9q3cD+OACQg5vcp4TS93ECgc=
+github.com/rogeecn/atom v1.0.1/go.mod h1:soq3SnaJ1zIPJHrAQvZhwDmAJpkwGcJ5Qf7nV4spKXU=
 github.com/rogpeppe/go-internal v1.3.0/go.mod h1:M8bDsm7K2OlrFYOpmOWEs/qY81heoFRclV5y23lUDJ4=
 github.com/rogpeppe/go-internal v1.10.0 h1:TMyTOH3F/DB16zRVcYyreMH6GnZZrwQVAoYjRBZyWFQ=
 github.com/spf13/afero v1.9.5 h1:stMpOSZFs//0Lv29HduCmli3GUfpFoF3Y1Q/aXj/wVM=

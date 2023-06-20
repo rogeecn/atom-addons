@@ -4,7 +4,7 @@ go 1.18
 
 require (
 	github.com/gofrs/uuid v4.4.0+incompatible
-	github.com/rogeecn/atom v1.0.0
+	github.com/rogeecn/atom v1.0.1
 )
 
 require (

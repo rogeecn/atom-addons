@@ -144,8 +144,12 @@ github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZN
 github.com/prometheus/client_model v0.0.0-20190812154241-14fe0d1b01d4/go.mod h1:xMI15A0UPsDsEKsMN9yxemIoYk6Tm2C1GtYGdfGttqA=
 github.com/rogeecn/atom v1.0.0 h1:+Cp+c5KEqTuzrlL9Mq0HUYCQSO2JQSEGWjaHo9aQLlY=
 github.com/rogeecn/atom v1.0.0/go.mod h1:XZjNCEMIl2TcuVdYmke5UeykrPRaDuTJaWD+clmEsms=
+github.com/rogeecn/atom v1.0.1 h1:PDMKHA3WlbOZIxbkN4V9q3cD+OACQg5vcp4TS93ECgc=
+github.com/rogeecn/atom v1.0.1/go.mod h1:soq3SnaJ1zIPJHrAQvZhwDmAJpkwGcJ5Qf7nV4spKXU=
 github.com/rogeecn/atom-addons/providers/http v0.0.0-20230613110641-0eab1ddb300c h1:fUlEOQI2wZc2rELH+5i16b8usEvPK7a2BMnz0Rg/MYQ=
 github.com/rogeecn/atom-addons/providers/http v0.0.0-20230613110641-0eab1ddb300c/go.mod h1:3WcG7M/kYD0mTDUZQOexEUNo9/+J1veSz9S/aQeCk3s=
+github.com/rogeecn/atom-addons/providers/http v0.0.0-20230619103917-2f2bd26c1555 h1:urXSJ/nb5dt56bFZRd4btpv8Bh5ZzM4G7yJkoWKNzRI=
+github.com/rogeecn/atom-addons/providers/http v0.0.0-20230619103917-2f2bd26c1555/go.mod h1:OYY+4wyLHBtrAZSKYpxF2dzjDsi57MLxuhalRO6sdVU=
 github.com/rogpeppe/go-internal v1.3.0/go.mod h1:M8bDsm7K2OlrFYOpmOWEs/qY81heoFRclV5y23lUDJ4=
 github.com/rogpeppe/go-internal v1.10.0 h1:TMyTOH3F/DB16zRVcYyreMH6GnZZrwQVAoYjRBZyWFQ=
 github.com/speps/go-hashids/v2 v2.0.1 h1:ViWOEqWES/pdOSq+C1SLVa8/Tnsd52XC34RY7lt7m4g=

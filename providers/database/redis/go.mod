@@ -5,7 +5,7 @@ go 1.18
 require (
 	github.com/pkg/errors v0.9.1
 	github.com/redis/go-redis/v9 v9.0.5
-	github.com/rogeecn/atom v1.0.0
+	github.com/rogeecn/atom v1.0.1
 )
 
 require (

@@ -143,6 +143,8 @@ github.com/ianlancetaylor/demangle v0.0.0-20181102032728-5e5cf60278f6/go.mod h1:
 github.com/ianlancetaylor/demangle v0.0.0-20200824232613-28f6c0f3b639/go.mod h1:aSSvb/t6k1mPoxDqO4vJh6VOCGPwU4O0C2/Eqndh1Sc=
 github.com/imroc/req/v3 v3.36.1 h1:wdFunfb7ZoYtPedtiVNF69qcZx96SLSnPvspaf/W/lE=
 github.com/imroc/req/v3 v3.36.1/go.mod h1:od0ChNn+B5j6bMogGvaupXDi40huKzOX+/CrtZb2dt8=
+github.com/imroc/req/v3 v3.37.0 h1:wc9738N3n06gsfqi3qAAH9NVnhn3UCDlvK9+jgM7sLU=
+github.com/imroc/req/v3 v3.37.0/go.mod h1:DECzjVIrj6jcUr5n6e+z0ygmCO93rx4Jy0RjOEe1YCI=
 github.com/jstemmer/go-junit-report v0.0.0-20190106144839-af01ea7f8024/go.mod h1:6v2b51hI/fHJwM22ozAgKL4VKDeJcHhJFhtBdhmNjmU=
 github.com/jstemmer/go-junit-report v0.9.1/go.mod h1:Brl9GWCQeLvo8nXZwPNNblvFj/XSXhF0NWZEnDohbsk=
 github.com/juju/go4 v0.0.0-20160222163258-40d72ab9641a h1:45JtCyuNYE+QN9aPuR1ID9++BQU+NMTMudHSuaK0Las=
@@ -162,7 +164,10 @@ github.com/mitchellh/mapstructure v1.5.0 h1:jeMsZIYE/09sWLaz43PL7Gy6RuMjD2eJVyua
 github.com/mitchellh/mapstructure v1.5.0/go.mod h1:bFUtVrKA4DC2yAKiSyO/QUcy7e+RRV2QTWOzhPopBRo=
 github.com/onsi/ginkgo/v2 v2.10.0 h1:sfUl4qgLdvkChZrWCYndY2EAu9BRIw1YphNAzy1VNWs=
 github.com/onsi/ginkgo/v2 v2.10.0/go.mod h1:UDQOh5wbQUlMnkLfVaIUMtQ1Vus92oM+P2JX1aulgcE=
+github.com/onsi/ginkgo/v2 v2.11.0 h1:WgqUCUt/lT6yXoQ8Wef0fsNn5cAuMK7+KT9UFRz2tcU=
+github.com/onsi/ginkgo/v2 v2.11.0/go.mod h1:ZhrRA5XmEE3x3rhlzamx/JJvujdZoJ2uvgI7kR0iZvM=
 github.com/onsi/gomega v1.27.7 h1:fVih9JD6ogIiHUN6ePK7HJidyEDpWGVB5mzM7cWNXoU=
+github.com/onsi/gomega v1.27.8 h1:gegWiwZjBsf2DgiSbf5hpokZ98JVDMcWkUiigk6/KXc=
 github.com/pelletier/go-toml/v2 v2.0.8 h1:0ctb6s9mE31h0/lhu+J6OPmVeDxJn+kYnJc2jZR9tGQ=
 github.com/pelletier/go-toml/v2 v2.0.8/go.mod h1:vuYfssBdrU2XDZ9bYydBu6t+6a6PYNcZljzZR9VXg+4=
 github.com/pkg/errors v0.9.1 h1:FEBLx1zS214owpjy7qsBeixbURkuhQAwrK5UwLGTwt4=
@@ -183,8 +188,12 @@ github.com/refraction-networking/utls v1.3.2 h1:o+AkWB57mkcoW36ET7uJ002CpBWHu0KP
 github.com/refraction-networking/utls v1.3.2/go.mod h1:fmoaOww2bxzzEpIKOebIsnBvjQpqP7L2vcm/9KUfm/E=
 github.com/rogeecn/atom v1.0.0 h1:+Cp+c5KEqTuzrlL9Mq0HUYCQSO2JQSEGWjaHo9aQLlY=
 github.com/rogeecn/atom v1.0.0/go.mod h1:XZjNCEMIl2TcuVdYmke5UeykrPRaDuTJaWD+clmEsms=
+github.com/rogeecn/atom v1.0.1 h1:PDMKHA3WlbOZIxbkN4V9q3cD+OACQg5vcp4TS93ECgc=
+github.com/rogeecn/atom v1.0.1/go.mod h1:soq3SnaJ1zIPJHrAQvZhwDmAJpkwGcJ5Qf7nV4spKXU=
 github.com/rogeecn/atom-addons/providers/http v0.0.0-20230613110641-0eab1ddb300c h1:fUlEOQI2wZc2rELH+5i16b8usEvPK7a2BMnz0Rg/MYQ=
 github.com/rogeecn/atom-addons/providers/http v0.0.0-20230613110641-0eab1ddb300c/go.mod h1:3WcG7M/kYD0mTDUZQOexEUNo9/+J1veSz9S/aQeCk3s=
+github.com/rogeecn/atom-addons/providers/http v0.0.0-20230619103917-2f2bd26c1555 h1:urXSJ/nb5dt56bFZRd4btpv8Bh5ZzM4G7yJkoWKNzRI=
+github.com/rogeecn/atom-addons/providers/http v0.0.0-20230619103917-2f2bd26c1555/go.mod h1:OYY+4wyLHBtrAZSKYpxF2dzjDsi57MLxuhalRO6sdVU=
 github.com/rogpeppe/clock v0.0.0-20190514195947-2896927a307a h1:3QH7VyOaaiUHNrA9Se4YQIRkDTCw1EJls9xTUCaCeRM=
 github.com/rogpeppe/clock v0.0.0-20190514195947-2896927a307a/go.mod h1:4r5QyqhjIWCcK8DO4KMclc5Iknq5qVBAlbYYzAbUScQ=
 github.com/rogpeppe/go-internal v1.3.0/go.mod h1:M8bDsm7K2OlrFYOpmOWEs/qY81heoFRclV5y23lUDJ4=
