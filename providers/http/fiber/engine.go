@@ -35,6 +35,10 @@ func (e *Service) GetEngine() interface{} {
 	return e.Engine
 }
 
+func (e *Service) Close() {
+	e.Engine.Shutdown()
+}
+
 func (e *Service) Serve() error {
 	if e.conf.Tls != nil {
 		return e.Engine.ListenTLS(e.conf.PortString(), e.conf.Tls.Cert, e.conf.Tls.Key)

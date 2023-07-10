@@ -1,6 +1,8 @@
 package httpgrpc
 
 import (
+	"context"
+
 	"github.com/rogeecn/atom-addons/providers/grpcs"
 	"github.com/rogeecn/atom-addons/providers/http"
 	"github.com/rogeecn/atom/container"
@@ -21,14 +23,11 @@ type Service struct {
 }
 
 func Serve() error {
-	defer container.Close()
-
-	return container.Container.Invoke(func(svc Service) error {
+	return container.Container.Invoke(func(ctx context.Context, svc Service) error {
 		for _, hdl := range svc.Handlers {
 			svc.Grpc.RegisterService(hdl.Name(), hdl.Register)
 		}
-
-		var eg errgroup.Group
+		eg, _ := errgroup.WithContext(ctx)
 		eg.Go(svc.Http.Serve)
 		eg.Go(svc.Grpc.Serve)
 		return eg.Wait()

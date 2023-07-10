@@ -16,8 +16,6 @@ type Http struct {
 }
 
 func Serve() error {
-	defer container.Close()
-
 	return container.Container.Invoke(func(http Http) error {
 		return http.Service.Serve()
 	})

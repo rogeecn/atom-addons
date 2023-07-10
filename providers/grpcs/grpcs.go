@@ -74,3 +74,15 @@ func (g *Grpc) RegisterService(name string, f func(*grpc.Server)) {
 	log.Debug("register service:", name)
 	f(g.server)
 }
+
+func (g *Grpc) GracefulStop() {
+	g.server.GracefulStop()
+}
+
+func (g *Grpc) Stop() {
+	g.server.Stop()
+}
+
+func (g *Grpc) Close() {
+	g.GracefulStop()
+}
