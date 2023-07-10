@@ -8,6 +8,7 @@ import (
 
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
+	"gorm.io/gorm/logger"
 	"gorm.io/gorm/schema"
 )
 
@@ -30,6 +31,7 @@ func Provide(opts ...opt.Option) error {
 				SingularTable: conf.Singular,
 			},
 			DisableForeignKeyConstraintWhenMigrating: true,
+			Logger:                                   &Logger{Level: logger.Info},
 		}
 
 		db, err := gorm.Open(postgres.New(dbConfig), &gormConfig)
