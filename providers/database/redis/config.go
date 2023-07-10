@@ -20,10 +20,11 @@ func DefaultProvider() container.ProviderContainer {
 }
 
 type Config struct {
-	Host     string
-	Port     uint
-	Password string
-	DB       uint
+	ClusterName string
+	Host        string
+	Port        uint
+	Password    string
+	DB          uint
 }
 
 func (c *Config) ToRedisOptions() *redis.Options {
@@ -31,5 +32,13 @@ func (c *Config) ToRedisOptions() *redis.Options {
 		Addr:     fmt.Sprintf("%s:%d", c.Host, c.Port),
 		Password: c.Password,
 		DB:       int(c.DB),
+	}
+}
+
+func (c *Config) ToRedisClusterOptions() *redis.ClusterOptions {
+	return &redis.ClusterOptions{
+		ClientName: c.ClusterName,
+		Addrs:      []string{fmt.Sprintf("%s:%d", c.Host, c.Port)},
+		Password:   c.Password,
 	}
 }
