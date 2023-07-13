@@ -1,4 +1,4 @@
-module github.com/rogeecn/services/httpgrpc
+module github.com/rogeecn/atom-addons/services/httpgrpc
 
 go 1.20
 
