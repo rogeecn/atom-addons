@@ -51,10 +51,12 @@ func Provide(opts ...opt.Option) error {
 			serverOptions = append(serverOptions, grpc.Creds(tlsConfig))
 		}
 
-		return &Grpc{
+		svc := &Grpc{
 			server: grpc.NewServer(serverOptions...),
 			config: &config,
-		}, nil
+		}
+		container.AddCloseAble(svc.Close)
+		return svc, nil
 	}, o.DiOptions()...)
 }
 

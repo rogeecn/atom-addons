@@ -70,6 +70,8 @@ func Provide(opts ...opt.Option) error {
 			TimeZone:   "Asia/Shanghai",
 		}))
 
-		return &Service{Engine: engine, conf: &config}, nil
+		svc := &Service{Engine: engine, conf: &config}
+		container.AddCloseAble(svc.Close)
+		return svc, nil
 	}, o.DiOptions()...)
 }
