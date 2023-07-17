@@ -28,6 +28,7 @@ func Provide(opts ...opt.Option) error {
 			conf:   &config,
 			Engine: micro.NewService(),
 		}
+		container.AddCloseAble(service.Close)
 		return service, nil
 	}, o.DiOptions()...)
 }
@@ -39,6 +40,10 @@ type Service struct {
 
 func (s *Service) Serve() error {
 	return s.Engine.Run()
+}
+
+func (s *Service) Close() {
+	s.Engine.Server().Stop()
 }
 
 func (s *Service) GetEngine() any {

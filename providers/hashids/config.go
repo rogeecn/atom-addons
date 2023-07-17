@@ -1,7 +1,6 @@
 package hashids
 
 import (
-	"github.com/rogeecn/atom-addons/providers/http"
 	"github.com/rogeecn/atom/container"
 	"github.com/rogeecn/atom/utils/opt"
 )
@@ -12,7 +11,7 @@ func DefaultProvider() container.ProviderContainer {
 	return container.ProviderContainer{
 		Provider: Provide,
 		Options: []opt.Option{
-			opt.Prefix(http.DefaultPrefix),
+			opt.Prefix(DefaultPrefix),
 		},
 	}
 }
